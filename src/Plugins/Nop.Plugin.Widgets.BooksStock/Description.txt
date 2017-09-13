@@ -1,0 +1,9 @@
+﻿Group: Widgets
+FriendlyName: Books Stock Text
+SystemName: Widgets.BooksStock
+Version: 1.0
+SupportedVersions: 3.90
+Author: Anton Losev
+DisplayOrder: 1
+FileName: Nop.Plugin.Widgets.BooksStock.dll
+Description: Books Stock Text. It keeps track of statistics about the visitors and ecommerce conversion on your website

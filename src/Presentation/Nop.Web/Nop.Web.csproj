@@ -477,7 +477,13 @@
     <Compile Include="Validators\Vendors\VendorInfoValidator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\browscap.xml" />
+    <Content Include="App_Data\browscap.crawlersonly.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\browscap.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\InstalledPlugins.txt" />
     <Content Include="App_Data\Install\Fast\create_required_data.sql" />
     <Content Include="App_Data\Install\Fast\create_sample_data.sql" />
     <Content Include="App_Data\Install\Fast\readme.txt" />
@@ -522,6 +528,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\Install\SqlServer.Indexes.sql" />
+    <Content Include="App_Data\Settings.txt" />
     <Content Include="Content\BBEditor\ed.js" />
     <Content Include="Content\BBEditor\images\bold.gif" />
     <Content Include="Content\BBEditor\images\code.gif" />
@@ -646,6 +653,8 @@
     <Content Include="Content\samples\product_IfYouWait_1.zip" />
     <Content Include="Content\samples\product_NightVision_1.zip" />
     <Content Include="Content\samples\product_ScienceAndFaith_1.zip" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\ypshop - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\fineuploader\iframe.xss.response-4.2.2.js" />
     <Content Include="Scripts\fineuploader\jquery.fineuploader-4.2.2.js" />
@@ -1066,7 +1075,9 @@
     <Content Include="Views\Product\_BackInStockSubscription.cshtml" />
     <Content Include="Views\BackInStockSubscription\SubscribePopup.cshtml" />
     <Content Include="Views\BackInStockSubscription\CustomerSubscriptions.cshtml" />
-    <Content Include="App_Data\Pdf\FreeSerif.ttf" />
+    <Content Include="App_Data\Pdf\FreeSerif.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Views\Common\StoreThemeSelector.cshtml" />
     <Content Include="Views\Shared\_Notifications.cshtml" />
     <Content Include="Views\Customer\_CustomerAttributes.cshtml" />
