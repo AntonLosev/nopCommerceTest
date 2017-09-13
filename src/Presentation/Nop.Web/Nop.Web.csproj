@@ -28,6 +28,7 @@
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>f94c814a</NuGetPackageImportStamp>
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -315,6 +316,7 @@
     <Compile Include="Infrastructure\Cache\ModelCacheEventConsumer.cs" />
     <Compile Include="Infrastructure\BackwardCompatibility2XRouteProvider.cs" />
     <Compile Include="Factories\CommonModelFactory.cs" />
+    <Compile Include="Infrastructure\DependencyRegistrarForBooks.cs" />
     <Compile Include="Infrastructure\GenericUrlRouteProvider.cs" />
     <Compile Include="Infrastructure\Installation\IInstallationLocalizationService.cs" />
     <Compile Include="Infrastructure\Installation\InstallationLanguage.cs" />
@@ -348,6 +350,8 @@
     <Compile Include="Models\Catalog\CategorySimpleModel.cs" />
     <Compile Include="Models\Catalog\CompareProductsModel.cs" />
     <Compile Include="Models\Catalog\CustomerProductReviewModel.cs" />
+    <Compile Include="Models\Catalog\ProductDetailsForBooksModel.cs" />
+    <Compile Include="Models\Catalog\ProductOverviewForBooksModel.cs" />
     <Compile Include="Models\Catalog\VendorModel.cs" />
     <Compile Include="Models\Catalog\VendorNavigationModel.cs" />
     <Compile Include="Models\Catalog\ProductOverviewModel.cs" />
@@ -450,6 +454,7 @@
     <Compile Include="Models\Topics\TopicModel.cs" />
     <Compile Include="Models\Vendors\VendorInfoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Themes\BooksThemes\Factories\BooksProductModelFactory.cs" />
     <Compile Include="Validators\Blogs\BlogPostValidator.cs" />
     <Compile Include="Validators\Boards\EditForumPostValidator.cs" />
     <Compile Include="Validators\Boards\EditForumTopicValidator.cs" />
@@ -658,6 +663,60 @@
     <Content Include="Scripts\selectivizr.min.js" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\_references.js" />
+    <Content Include="Themes\BooksThemes\Content\css\ie8.css" />
+    <Content Include="Themes\BooksThemes\Content\css\print.css" />
+    <Content Include="Themes\BooksThemes\Content\css\styles.css" />
+    <Content Include="Themes\BooksThemes\Content\css\styles.rtl.css" />
+    <Content Include="Themes\BooksThemes\Content\images\ajax-loader-small.gif" />
+    <Content Include="Themes\BooksThemes\Content\images\back-button.png" />
+    <Content Include="Themes\BooksThemes\Content\images\calendar-next.png" />
+    <Content Include="Themes\BooksThemes\Content\images\calendar-prev.png" />
+    <Content Include="Themes\BooksThemes\Content\images\close.png" />
+    <Content Include="Themes\BooksThemes\Content\images\compare-button.png" />
+    <Content Include="Themes\BooksThemes\Content\images\details.png" />
+    <Content Include="Themes\BooksThemes\Content\images\discontinued-product-icon.png" />
+    <Content Include="Themes\BooksThemes\Content\images\download-button.png" />
+    <Content Include="Themes\BooksThemes\Content\images\edit.png" />
+    <Content Include="Themes\BooksThemes\Content\images\edit_.png" />
+    <Content Include="Themes\BooksThemes\Content\images\email-button.png" />
+    <Content Include="Themes\BooksThemes\Content\images\first.png" />
+    <Content Include="Themes\BooksThemes\Content\images\ie_warning.jpg" />
+    <Content Include="Themes\BooksThemes\Content\images\last.png" />
+    <Content Include="Themes\BooksThemes\Content\images\loading.gif" />
+    <Content Include="Themes\BooksThemes\Content\images\logo.png" />
+    <Content Include="Themes\BooksThemes\Content\images\menu-icon.png" />
+    <Content Include="Themes\BooksThemes\Content\images\move.png" />
+    <Content Include="Themes\BooksThemes\Content\images\new.png" />
+    <Content Include="Themes\BooksThemes\Content\images\next.png" />
+    <Content Include="Themes\BooksThemes\Content\images\pointer.png" />
+    <Content Include="Themes\BooksThemes\Content\images\prev.png" />
+    <Content Include="Themes\BooksThemes\Content\images\rating1.png" />
+    <Content Include="Themes\BooksThemes\Content\images\rating2.png" />
+    <Content Include="Themes\BooksThemes\Content\images\remove.png" />
+    <Content Include="Themes\BooksThemes\Content\images\remove_.png" />
+    <Content Include="Themes\BooksThemes\Content\images\reply.png" />
+    <Content Include="Themes\BooksThemes\Content\images\retry.png" />
+    <Content Include="Themes\BooksThemes\Content\images\return.png" />
+    <Content Include="Themes\BooksThemes\Content\images\rss.png" />
+    <Content Include="Themes\BooksThemes\Content\images\shipping.png" />
+    <Content Include="Themes\BooksThemes\Content\images\shopping-bag.png" />
+    <Content Include="Themes\BooksThemes\Content\images\social-sprite.png" />
+    <Content Include="Themes\BooksThemes\Content\images\subscribe-button.png" />
+    <Content Include="Themes\BooksThemes\Content\images\toggle-black.png" />
+    <Content Include="Themes\BooksThemes\Content\images\toggle-gray.png" />
+    <Content Include="Themes\BooksThemes\Content\images\toggle-white.png" />
+    <Content Include="Themes\BooksThemes\Content\images\topic-type1.png" />
+    <Content Include="Themes\BooksThemes\Content\images\topic-type2.png" />
+    <Content Include="Themes\BooksThemes\Content\images\topic-type3.png" />
+    <Content Include="Themes\BooksThemes\Content\images\view-grid.png" />
+    <Content Include="Themes\BooksThemes\Content\images\view-list.png" />
+    <Content Include="Themes\BooksThemes\Content\images\vote-down-selected.png" />
+    <Content Include="Themes\BooksThemes\Content\images\vote-down.png" />
+    <Content Include="Themes\BooksThemes\Content\images\vote-up-selected.png" />
+    <Content Include="Themes\BooksThemes\Content\images\vote-up.png" />
+    <Content Include="Themes\BooksThemes\Content\images\watch.png" />
+    <Content Include="Themes\BooksThemes\Content\images\wishlist-button.png" />
+    <Content Include="Themes\BooksThemes\preview.jpg" />
     <Content Include="Themes\DefaultClean\Content\css\ie8.css" />
     <Content Include="Themes\DefaultClean\Content\css\styles.css" />
     <Content Include="Themes\DefaultClean\Content\css\styles.rtl.css" />
@@ -1029,6 +1088,46 @@
     <Content Include="Views\Vendor\Info.cshtml" />
     <Content Include="Views\Common\Logo.cshtml" />
     <Content Include="Views\Customer\EmailRevalidation.cshtml" />
+    <Content Include="Themes\BooksThemes\theme.config" />
+    <Content Include="Themes\BooksThemes\Views\Shared\Head.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Web.config" />
+    <Content Include="Themes\BooksThemes\Views\Product\_AddToCart.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_AddToWishlist.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_Availability.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_BackInStockSubscription.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_CompareProductsButton.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_DeliveryInfo.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_Discontinued.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_DownloadSample.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_GiftCardInfo.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_ProductAttributes.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_ProductBreadcrumb.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_ProductDetailsPictures.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_ProductEmailAFriendButton.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_ProductManufacturers.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_ProductPrice.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_ProductReviewHelpfulness.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_ProductReviewOverview.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_ProductSpecifications.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_ProductTags.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_ProductTierPrices.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_RentalInfo.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_ShareButton.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\_SKU_Man_GTIN_Ven.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\CompareProducts.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\CrossSellProducts.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\CustomerProductReviews.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\HomepageBestSellers.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\HomepageProducts.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\NewProducts.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\ProductEmailAFriend.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\ProductReviews.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\ProductsAlsoPurchased.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\ProductTemplate.Grouped.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\ProductTemplate.Simple.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\RecentlyViewedProducts.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\RecentlyViewedProductsBlock.cshtml" />
+    <Content Include="Themes\BooksThemes\Views\Product\RelatedProducts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Plugins\bin\" />

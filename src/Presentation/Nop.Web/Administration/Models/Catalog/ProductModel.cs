@@ -92,6 +92,10 @@ namespace Nop.Admin.Models.Catalog
         [AllowHtml]
         public string FullDescription { get; set; }
 
+        [NopResourceDisplayName("Admin.Catalog.Products.Fields.Author")]
+        [AllowHtml]
+        public string Author { get; set; }
+
         [NopResourceDisplayName("Admin.Catalog.Products.Fields.AdminComment")]
         [AllowHtml]
         public string AdminComment { get; set; }
@@ -1004,6 +1008,11 @@ namespace Nop.Admin.Models.Catalog
         [NopResourceDisplayName("Admin.Catalog.Products.Fields.FullDescription")]
         [AllowHtml]
         public string FullDescription { get; set; }
+
+
+        [NopResourceDisplayName("Admin.Catalog.Products.Fields.Author")]
+        [AllowHtml]
+        public string Author { get; set; }
 
         [NopResourceDisplayName("Admin.Catalog.Products.Fields.MetaKeywords")]
         [AllowHtml]
