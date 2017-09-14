@@ -477,9 +477,6 @@
     <Compile Include="Validators\Vendors\VendorInfoValidator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\browscap.crawlersonly.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="App_Data\browscap.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
